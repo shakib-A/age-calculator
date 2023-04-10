@@ -52,7 +52,6 @@ const App = () => {
  
   const handleSubmit = () => {
     setFormErrors(validateForm(birthDate))
-    console.log(formErrors)
     if(isSubmited) {
       setResult(calculateAge(birthDate))
     }
