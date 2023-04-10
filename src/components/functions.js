@@ -17,7 +17,7 @@ const validateForm = (value) => {
      errorObj.errorDay = "Can't be blank"
     } else if (birthDay.length === 1) {
      errorObj.errorDay = 'two digits are required'
-    } else if (parseInt(birthDay) > monthDetail[parseInt(birthMonth) - 1].daysNumber) {
+    } else if (monthDetail[parseInt(birthMonth) - 1] && parseInt(birthDay) > monthDetail[parseInt(birthMonth) - 1].daysNumber) {
       errorObj.errorDay = 'enter valid day'
     } 
     
